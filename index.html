@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Profile Dashboard</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="profile.jpg" alt="Joana Jean" class="profile-img">
+      <h1>Joana Jean Astacaan</h1>
+      <p>IT student of mdc | 3rd year level student </p>
+      <div class="social-links">
+        <a href="https://github.com/" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://x.com/home" title="Twitter"><i class="fab fa-twitter"></i></a>
+      </div>
+    </header>
+
+    <div class="main-content">
+      <section class="card">
+        <h2><i class="fas fa-user"></i> About Me</h2>
+        <div class="info-grid">
+          <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <strong>Location</strong>
+              <p>Barangay Ubojan, Tubigon</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <strong>Email</strong>
+              <p>astacaanjoanajean@gmail.com</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-phone"></i>
+            <div>
+              <strong>Phone</strong>
+              <p>09388100286</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2><i class="fas fa-lightbulb"></i> My Favorite Quotes in Life</h2>
+        <button id="toggle-facts" class="btn btn-outline">
+          <i class="fas fa-eye"></i> Show Quotes
+        </button>
+        <ul id="facts-list" style="display:none;">
+          <li><i class="fas fa-brain"></i> Life is really simple, but we insist on making it complicated.</li>
+          <li><i class="fas fa-heart"></i> To love oneself is the beginning of a lifelong romance.</li>
+          <li><i class="fas fa-seedling"></i> It is never too late to be what you might have been.</li>
+        </ul>        
+      </section>
+
+      <section class="card">
+        <h2><i class="fas fa-code-branch"></i> GitHub Lookup</h2>
+        <div class="input-group">
+          <label for="github-username">GitHub Username</label>
+          <div style="display: flex; gap: 10px;">
+            <input type="text" id="github-username" placeholder="e.g. joana27">
+            <button id="fetch-github" class="btn btn-primary">
+              <i class="fas fa-search"></i> Search
+            </button>
+          </div>
+        </div>
+        <div id="github-data"></div>
+      </section>
+
+
+      <section class="card">
+        <h2><i class="fas fa-hiking"></i> My Hobbies</h2>
+        <div id="accordion">
+      
+          <h3><i class="fas fa-video"></i> Watching Vlogs of Geo Ong</h3>
+          <div>
+            <p><i class="fas fa-tv"></i> I enjoy watching Geo Ong’s vlogs because they show raw and real-life roadtrip adventures, music, and family moments.</p>
+            <p><i class="fas fa-music"></i> His background stories and original rap tracks make every episode feel authentic and inspiring.</p>
+          </div>
+      
+          <h3><i class="fas fa-car-side"></i> Roadtrip</h3>
+          <div>
+            <p><i class="fas fa-route"></i> Roadtrips give me a sense of freedom — exploring new places, taking scenic detours, and making spontaneous stops along the way.</p>
+            <p><i class="fas fa-camera-retro"></i> I love capturing memories through photos and videos, especially when the landscape is breathtaking.</p>
+          </div>
+      
+          <h3><i class="fas fa-utensils"></i> Eating</h3>
+          <div>
+            <p><i class="fas fa-hamburger"></i> Trying local food is one of my favorite parts of any adventure — from roadside diners to night markets.</p>
+            <p><i class="fas fa-smile-beam"></i> Great food always brings joy, and sharing meals with friends or family makes the experience even better.</p>
+          </div>
+      
+        </div>
+      </section>
+      
+
+      <section class="card">
+        <h2><i class="fas fa-envelope"></i> Contact Me</h2>
+        <form id="form">
+          <div class="input-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="John Smith" required>
+          </div>
+          <div class="input-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="john@example.com" required>
+          </div>
+          <div class="input-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="4" placeholder="Your message here..." required></textarea>
+          </div>
+          <div class="input-group">
+            <label for="contact-date">Preferred Contact Date</label>
+            <input type="text" id="contact-date" placeholder="Select a date">
+          </div>
+          <button type="submit" class="btn btn-primary">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+        <div id="form-success" class="alert alert-success" style="display:none;">
+          <i class="fas fa-check-circle"></i> Message sent successfully! I'll get back to you soon.
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <p>&copy; 2023 Jane Doe's Interactive Profile. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+  <script src="script.js"></script>
+
+  
+</body>
+</html>
